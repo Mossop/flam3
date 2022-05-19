@@ -3720,6 +3720,10 @@ ushort_atomic_add(unsigned short *dest, unsigned short delta)
 }
 #endif /* HAVE_GCC_ATOMIC_OPS */
 
+double mult_bypass_optimize(double a, double b) {
+   return a * b;
+}
+
 /* 64-bit datatypes */
 #define bucket bucket_double
 #define abucket abucket_double

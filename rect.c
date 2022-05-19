@@ -137,7 +137,7 @@ static void de_thread(void *dth) {
                c[2] = (double) b[0][2];
                c[3] = (double) b[0][3];
 
-               ls = dthp->de->filter_coefs[f_coef_idx]*(dthp->k1 * log(1.0 + c[3] * dthp->k2))/c[3];
+               ls = dthp->de->filter_coefs[f_coef_idx]*(dthp->k1 * log(1.0 + mult_bypass_optimize(c[3], dthp->k2)))/c[3];
 
                c[0] *= ls;
                c[1] *= ls;
